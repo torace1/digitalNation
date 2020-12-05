@@ -1,9 +1,11 @@
 package com.shop.model.database;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 @Entity
 public class Product {
@@ -12,9 +14,24 @@ public class Product {
 	@Id
 	private Integer id;
 	
+	@Column(name = "denumireProdus")
 	private String denumireProdus;
 	
+	@Column(name = "pret")
 	private String pret;
+	
+	@Column(name = "descriere")
+	private String descriere;
+	
+	
+
+	public String getDescriere() {
+		return descriere;
+	}
+
+	public void setDescriere(String descriere) {
+		this.descriere = descriere;
+	}
 
 	public Integer getId() {
 		return id;
