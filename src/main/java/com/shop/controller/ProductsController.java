@@ -68,7 +68,7 @@ public class ProductsController {
 	    }
 	    
 	    @PostMapping("update/{id}")
-	    public String updateStudent(@PathVariable("id") int id,  Product produs, BindingResult result,
+	    public String updateProduct(@PathVariable("id") int id,  Product produs, BindingResult result,
 	        Model model) {
 	        if (result.hasErrors()) {
 	        	produs.setId(id);
@@ -81,7 +81,7 @@ public class ProductsController {
 	    }
 
 	    @GetMapping("delete/{id}")
-	    public String deleteStudent(@PathVariable("id") int id, Model model) {
+	    public String deleteProduct(@PathVariable("id") int id, Model model) {
 	    	
 	    	Product produs = new Product();
 	    	try {
