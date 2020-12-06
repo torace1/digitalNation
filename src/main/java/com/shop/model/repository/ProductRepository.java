@@ -13,6 +13,6 @@ import com.shop.model.database.Product;
 public interface ProductRepository extends CrudRepository<Product, Integer>{
 
 	//List<Product> findByName(String name); 
-	@Query(value="select * from Product p where p.denumireProdus like %:keyword%",nativeQuery = true)
+	@Query(value="select * from PRODUCT p where p.DENUMIRE_PRODUS like %:keyword%",nativeQuery = true)
 	List<Product> findByKeyword(@Param("keyword") String keyword);
 }

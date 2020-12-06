@@ -45,9 +45,6 @@ public class ProductsController {
 	 
 	 @PostMapping("add")
 	    public String addProduct( Product product, BindingResult result, Model model) {
-	        if (result.hasErrors()) {
-	            return "add-product";
-	        }
 
 	        productRepository.save(product);
 	        return "redirect:list";
